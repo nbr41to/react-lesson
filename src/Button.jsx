@@ -1,11 +1,11 @@
-import React from 'react'
+const Button = ({ whatColor, setColor }) => {
 
-const Button = ({ onClick }) => {
   return (
     <button
-      onClick={onClick}
+      style={{ color: "white", backgroundColor: whatColor }}
+      onClick={() => setColor(whatColor)}
     >
-      押してね！
+      色を変えます！
     </button>
   )
 }
