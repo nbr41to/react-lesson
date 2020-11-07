@@ -9,12 +9,12 @@
   font-size: 46px;
 } */
 
-input:checked {
-  color: red;
+input:checked ~ span {
+  color: gray;
   text-decoration: line-through ;
 }
 
-input[type="checkbox"]:checked{
-  color: red;
-  text-decoration: line-through ;
-}
+/* .checked {
+color: gray;
+text-decoration: line-through ;
+} */

@@ -58,12 +58,13 @@ const TodoList = () => {
         {todos.map((task, index) => {
           return (
             <li key={index} className="todo-list">
+              {/* <li key={index} className={`${task.checked ? 'checked' : ''}`}> */}
               <input
                 type="checkbox"
                 checked={task.checked}
                 onClick={() => ToggleCheckbox(index)}
               />
-              {task.todo}
+              <span>{task.todo}</span>
               <button onClick={() => { }}>×</button>
             </li>
           )
