@@ -8,3 +8,13 @@
 /* p {
   font-size: 46px;
 } */
+
+input:checked {
+  color: red;
+  text-decoration: line-through ;
+}
+
+input[type="checkbox"]:checked{
+  color: red;
+  text-decoration: line-through ;
+}
