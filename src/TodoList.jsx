@@ -44,8 +44,8 @@ const TodoList = () => {
   console.log(todos)
 
   return (
-    <>
-      <h1>To Do List</h1>
+    <div className="box">
+      <h1>Todo App</h1>
       <input
         type="text"
         value={inputText}
@@ -70,7 +70,7 @@ const TodoList = () => {
           )
         })}
       </ul>
-    </>
+    </div>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Textbox from "./Textbox"
-import Button from "./Button"
+import Textbox from "./components/Textbox"
+import Button from "./components/Button"
 
 const FirstLesson = () => {
   const name = "nob"
@@ -15,7 +15,7 @@ const FirstLesson = () => {
   const [color, setColor] = useState("aaa")
 
   return (
-    <div>
+    <div className="box">
       <h1 className="title">初めてのReactだ！</h1>
       <p>講師の{name}です.よろしくお願いします.</p>
       <button

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import FirstLesson from './FirstLesson'
 import TodoList from "./TodoList"
+import Chat from "./Chat"
+import ClassComponent from "./Class"
 import "./style.css"
 
 const App = () => {
@@ -10,6 +12,8 @@ const App = () => {
     <>
       <FirstLesson />
       <TodoList />
+      <Chat />
+      <ClassComponent />
     </>
   );
 }
