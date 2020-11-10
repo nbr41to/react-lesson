@@ -1,5 +1,5 @@
 const Button = ({ whatColor, setColor }) => {
-
+  console.log("ButtonがRenderingされました")
   return (
     <button
       style={{ color: "white", backgroundColor: whatColor }}

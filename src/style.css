@@ -29,9 +29,9 @@ color: gray;
 text-decoration: line-through ;
 } */
 
-.message-box {
-	position: relative;
+.message-box-kuro {
 	width: 300px;
+	position: relative;
 	margin: 1.5em 0 1.5em 15px;
 	padding: 20px;
 	min-width: 120px;
@@ -42,7 +42,7 @@ text-decoration: line-through ;
 	border-radius: 12px;
 }
 
-.message-box:before {
+.message-box-kuro:before {
 	content: '';
 	position: absolute;
 	top: 50%;
@@ -50,4 +50,27 @@ text-decoration: line-through ;
 	margin-top: -15px;
 	border: 15px solid transparent;
 	border-right: 15px solid #e0edff;
+}
+
+.message-box-siro {
+	width: 300px;
+	position: relative;
+	margin: 1.5em 15px 1.5em 0;
+	padding: 20px;
+	min-width: 120px;
+	max-width: 100%;
+	color: #555;
+	font-size: 16px;
+	background: papayawhip;
+	border-radius: 12px;
+}
+
+.message-box-siro:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	margin-top: -15px;
+	border: 15px solid transparent;
+	border-left: 15px solid papayawhip;
 }

@@ -6,16 +6,14 @@ const Chat = () => {
     { user: "クロやぎ", text: "こんにちは！" },
     { user: "シロやぎ", text: "こんにちは！" },
   ])
-  console.log(messages)
-  const users = ["クロやぎ", "シロやぎ"]
 
-  const submitByYou = () => {
-    setMessages([...messages, input])
+  const submitByKuro = () => {
+    setMessages([...messages, { user: "クロやぎ", text: input }])
     setInput("")
   }
 
-  const submitByYagi = () => {
-    setMessages([...messages, input])
+  const submitBySiro = () => {
+    setMessages([...messages, { user: "シロやぎ", text: input }])
     setInput("")
   }
 
@@ -23,13 +21,21 @@ const Chat = () => {
   return (
     <div className="box">
       <h1>Chat App</h1>
+      <a href="about.index">リンク</a>
       <div>
-        {messages.map((message, index) => <p className="message-box" key={index}>[{message.user}]: {message.text}</p>)}
+        {messages.map((message, index) =>
+          <p
+            className={message.user === "クロやぎ" ? "message-box-kuro" : "message-box-siro"}
+            key={index}
+          >
+            [{message.user}]: {message.text}
+          </p>
+        )}
       </div>
       <input value={input} onChange={(event) => setInput(event.target.value)} type="text" />
       <br />
-      <button onClick={submitByYou}>あなたで送信</button>
-      <button onClick={submitByYagi}>やぎで送信</button>
+      <button onClick={submitByKuro}>クロやぎで送信</button>
+      <button onClick={submitBySiro}>シロやぎで送信</button>
     </div>
   )
 }

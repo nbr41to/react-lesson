@@ -41,7 +41,12 @@ const TodoList = () => {
       })
     )
   }
-  console.log(todos)
+
+  const deleteTodo = (i) => {
+    setTodos([
+
+    ])
+  }
 
   return (
     <div className="box">
@@ -65,12 +70,12 @@ const TodoList = () => {
                 onClick={() => ToggleCheckbox(index)}
               />
               <span>{task.todo}</span>
-              <button onClick={() => { }}>×</button>
+              <button onClick={(index) => deleteTodo(index)} >×</button>
             </li>
           )
         })}
       </ul>
-    </div>
+    </div >
   )
 }
 
