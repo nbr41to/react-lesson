@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
-import FirstLesson from './FirstLesson'
-import SecondLesson from './SecondLesson'
-import TodoList from "./TodoList"
-import Chat from "./Chat"
-import ClassComponent from "./Class"
-import AdminPage from "./AdminPage"
+import FirstLesson from './pages/FirstLesson'
+import SecondLesson from './pages/SecondLesson'
+import TodoPage from "./pages/TodoPage"
+import ChatPage from "./pages/ChatPage"
+import ClassComponent from "./pages/Class"
+import AdminPage from "./pages/AdminPage"
+import LoginPage from "./pages/LoginPage"
 import ContextProvider from "./Context"
+import Auth from "./Auth"
 import "./style.css"
 
 const App = () => {
@@ -23,12 +25,17 @@ const App = () => {
         <Link className="box" to="/second">SecondLesson</Link>
         <Link className="box" to="/admin">ログインページ</Link>
         <Switch>
-          <Route exact path='/' component={FirstLesson} />
-          <Route exact path='/todo' component={TodoList} />
-          <Route exact path='/chat' component={Chat} />
-          <Route exact path='/class' component={ClassComponent} />
-          <Route exact path='/second' component={SecondLesson} />
-          <Route exact path='/admin' component={AdminPage} />
+          <Route exact path='/login' component={LoginPage} />
+          <Auth>
+            <Switch>
+              <Route exact path='/' component={FirstLesson} />
+              <Route exact path='/todo' component={TodoPage} />
+              <Route exact path='/chat' component={ChatPage} />
+              <Route exact path='/class' component={ClassComponent} />
+              <Route exact path='/second' component={SecondLesson} />
+              <Route exact path='/admin' component={AdminPage} />
+            </Switch>
+          </Auth>
         </Switch>
       </ContextProvider>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Chat = () => {
+const ChatPage = () => {
   const [input, setInput] = useState("")
   const [messages, setMessages] = useState([
     { user: "クロやぎ", text: "こんにちは！" },
@@ -40,4 +40,4 @@ const Chat = () => {
   )
 }
 
-export default Chat
+export default ChatPage

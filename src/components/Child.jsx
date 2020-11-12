@@ -3,7 +3,7 @@ import { Context } from "../Context"
 
 const Child = ({ name, color }) => {
   const [text, setText] = useState("子どもテキスト")
-  const [user, setUser] = useContext(Context)
+  const { user, setUser } = useContext(Context)
   console.log("子どもがRenderingされました")
   return (
     <>

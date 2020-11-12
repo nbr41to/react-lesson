@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react'
-import Parent from './components/Parent'
-import Button from './components/Button'
+import Parent from '../components/Parent'
+import Button from '../components/Button'
 
 const SecondLesson = () => {
-  const [color, setColor] = useState("red")
+  const { color, setColor } = useState("red")
   console.log("SecondLessonがRenderingされました")
   return (
     <div className="box">

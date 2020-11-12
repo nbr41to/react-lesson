@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Textbox from "./components/Textbox"
-import Button from "./components/Button"
+import Textbox from "../components/Textbox"
+import Button from "../components/Button"
 
 const FirstLesson = () => {
   const name = "nob"
