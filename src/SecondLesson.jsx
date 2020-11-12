@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Parent from './components/Parent'
 import Button from './components/Button'
 
@@ -9,7 +9,7 @@ const SecondLesson = () => {
     <div className="box">
       <h1>Second Lesson</h1>
       <Parent name="太郎" color={color} />
-      <Button whatColor="green" setColor={setColor} />
+      <Button whatColor="green" setColor={setColor} >ボタンだよ！</Button>
       {/* <Parent />
       <Parent /> */}
     </div>

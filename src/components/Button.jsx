@@ -1,11 +1,13 @@
-const Button = ({ whatColor, setColor }) => {
+import React from 'react'
+
+const Button = ({ children, whatColor, setColor }) => {
   console.log("ButtonがRenderingされました")
   return (
     <button
       style={{ color: "white", backgroundColor: whatColor }}
       onClick={() => setColor(whatColor)}
     >
-      色を変えます！
+      {children}
     </button>
   )
 }

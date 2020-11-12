@@ -42,10 +42,12 @@ const TodoList = () => {
     )
   }
 
-  const deleteTodo = (i) => {
-    setTodos([
 
-    ])
+
+  const deleteTodo = (i) => {
+    setTodos(
+      todos.filter((_, index) => i !== index)
+    )
   }
 
   return (
@@ -70,7 +72,7 @@ const TodoList = () => {
                 onClick={() => ToggleCheckbox(index)}
               />
               <span>{task.todo}</span>
-              <button onClick={(index) => deleteTodo(index)} >×</button>
+              <button onClick={() => deleteTodo(index)} >×</button>
             </li>
           )
         })}

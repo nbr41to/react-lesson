@@ -1,7 +1,7 @@
 import React from 'react'
 import Child from './Child'
 
-const Parent = ({ name, color }) => {
+const Parent = React.memo(({ name, color }) => {
   console.log("親がRenderingされました")
   return (
     <div className="box">
@@ -9,6 +9,6 @@ const Parent = ({ name, color }) => {
       <Child name={name} color={color} />
     </div>
   )
-}
+})
 
 export default Parent
