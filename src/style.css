@@ -15,9 +15,22 @@
 	display: flex;
 }
 
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.margin {
+	margin: 8px;
+}
+
 .checked {
 	color: gray;
 	text-decoration: line-through;
+}
+
+ul {
+	padding: 0;
 }
 
 .message-box-kuro {

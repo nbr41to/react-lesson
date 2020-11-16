@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { Context } from '../Context'
+import { useHistory } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
 
 const ChatPage = () => {
   const [input, setInput] = useState("")
@@ -17,11 +20,29 @@ const ChatPage = () => {
     setInput("")
   }
 
-  console.log(input)
+  const { user, setUser } = useContext(Context)
+  const history = useHistory()
+
+  useEffect(() => {
+    if (!user) {
+      history.push("/login")
+    }
+    return () => {
+      console.log("コンポーネントが死にました")
+    }
+  }, [user])
+
+  // console.log(input)
   return (
     <div className="box">
       <h1>Chat App</h1>
-      <a href="about.index">リンク</a>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setUser(false)}
+      >
+        ログアウト
+      </Button>
       <div>
         {messages.map((message, index) =>
           <p
